@@ -29,7 +29,7 @@ server = app.server
 # In[3]:
 
 
-Spotify = pd.read_csv("/Spotify_to_app.csv")
+Spotify = pd.read_csv("Spotify_to_app.csv")
 
 key_options          = Spotify["music_key"].astype(str).unique()
 language_options     = Spotify["Artist_origin"].astype(str).unique()
