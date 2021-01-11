@@ -12,17 +12,24 @@ import plotly.graph_objs as go
 from jupyter_dash import JupyterDash
 import dash
 from dash.dependencies import Input, Output
-import pandas as pd
-import numpy as np
 
 from datetime import datetime as dt
 import plotly.express as px
+
+from jupyter_dash import JupyterDash
+import dash
+import numpy as np
+
+
+
+app = dash.Dash(__name__)
+server = app.server
 
 
 # In[3]:
 
 
-Spotify = pd.read("sergedegosson70/App2Blog/Spotify_to_app.csv")
+Spotify = pd.read_csv("Spotify_to_app.csv")
 
 key_options          = Spotify["music_key"].astype(str).unique()
 language_options     = Spotify["Artist_origin"].astype(str).unique()
