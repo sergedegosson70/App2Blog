@@ -8,6 +8,7 @@ import dash
 import pandas as pd
 import dash_core_components as dcc
 import dash_html_components as html
+import flask
 import plotly.graph_objs as go
 from jupyter_dash import JupyterDash
 import dash
@@ -35,7 +36,7 @@ key_options          = Spotify["music_key"].astype(str).unique()
 language_options     = Spotify["Artist_origin"].astype(str).unique()
 decade_options       = Spotify["Song_Decade"].astype(str).unique()
 
-app = dash.Dash(__name__)
+#app = dash.Dash(__name__)
 #app.layout = html.Div(html.H1('Heading', style={'backgroundColor':'blue'})
 app.layout = html.Div([
     html.H1("Popularity of songs"),
