@@ -115,7 +115,7 @@ def update_graph(music_key,Artist_origin,Song_Decade):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server()
 
 
 # In[ ]:
