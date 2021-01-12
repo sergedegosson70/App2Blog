@@ -38,7 +38,7 @@ decade_options       = Spotify["Song_Decade"].astype(str).unique()
 app = dash.Dash()
 #app.layout = html.Div(html.H1('Heading', style={'backgroundColor':'blue'})
 app.layout = html.Div([
-    html.H2("Popularity of songs"),
+    html.H1("Popularity of songs"),
     html.Div(
         [
             dcc.Dropdown(
@@ -115,7 +115,7 @@ def update_graph(music_key,Artist_origin,Song_Decade):
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run_server(debug = True)
 
 
 # In[ ]:
