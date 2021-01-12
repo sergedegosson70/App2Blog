@@ -22,7 +22,7 @@ import dash
 import numpy as np
 
 
-
+server = flask.Flask(__name__)
 app = dash.Dash(__name__)
 server = app.server
 
