@@ -29,7 +29,7 @@ server = app.server
 # In[3]:
 
 
-Spotify = pd.read_csv("Spotify_to_app.csv")
+Spotify = pd.read_csv("Spotify_to_app.csv", sep=";", encoding='utf_8_sig')
 
 key_options          = Spotify["music_key"].astype(str).unique()
 language_options     = Spotify["Artist_origin"].astype(str).unique()
@@ -115,7 +115,7 @@ def update_graph(music_key,Artist_origin,Song_Decade):
 
 
 if __name__ == '__main__':
-    app.run_server()
+    app.run()
 
 
 # In[ ]:
